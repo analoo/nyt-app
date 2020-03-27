@@ -31,13 +31,10 @@ function getData() {
     var authorP = $("<p>")
     authorP.text(NYTData.articles[i].author)
     $("#appended-articles").append(authorP)
-
-    NYTData.articles[i].source;
-    NYTData.articles[i].title;
-    NYTData.articles[i].author;
-    NYTData.articles[i].description;
-    NYTData.articles[i].url;
-    NYTData.articles[i].publishedAt;
+    $("#appended-articles").append("<p>" + NYTData.articles[i].description + "</p>");
+    $("#appended-articles").append("<p>" + NYTData.articles[i].source + "</p>");
+    $("#appended-articles").append("<a href='" + NYTData.articles[i].url + "'target='_blank'>Link to article</a>");
+    $("#appended-articles").append("<p>" + NYTData.articles[i].publishedAt + "</p>");
   }
   // console.log(searchTerm);
   // console.log(requestedNumber);
