@@ -1,76 +1,108 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-
-<head>
+  <head>
     <!-- Required meta tags -->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
 
     <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
-        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+      integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+      crossorigin="anonymous"
+    />
 
-    <link rel="stylesheet" type="text/css" href="style.css">
+
+
+    <link rel="stylesheet" type="text/css" href="style.css" />
 
     <title>NYTimes App</title>
-</head>
+  </head>
 
-<body>
+  <body>
     <div class="jumbotron jumbotron-fluid">
-        <div class="container">
-            <h2 class="display-4">New York Times Search</h2>
-        </div>
+      <div class="container">
+        <h2 class="display-4">New York Times Search</h2>
+      </div>
     </div>
     <div class="card">
-        <h5 class="card-header">Search Parameters</h5>
-        <div class="card-body">
-            <form>
-                <div class="form-group">
-                    <label for="searchTerm">Search Term:</label>
-                    <input type="text" class="form-control" id="searchTerm" placeholder="">
-                </div>
-                <div class="form-group">
-                    <label for="recordsSearch">Number of Records to Retrieve</label>
-                    <select class="form-control" id="recordsSearch">
-                        <option>5</option>
-                        <option>10</option>
-                        <option>15</option>
-                        <option>20</option>
-                        <option>25</option>
-                    </select>
-                </div>
-                <div class="form-group">
-                    <label for="startYearSearch">Start Year (Optional):</label>
-                    <input type="text" class="form-control" id="startYearSearch" placeholder="">
-                </div>
-                <div class="form-group">
-                    <label for="endYearSearch">End Year (Optional):</label>
-                    <input type="text" class="form-control" id="endYearSearch" placeholder="">
-                </div>
-                <button type="submit" class="btn btn-primary">Search</button>
-                <button type="reset" class="btn btn-primary">Clear Results</button>
-            </form>
-        </div>
+      <h5 class="card-header">Search Parameters</h5>
+      <div class="card-body">
+        <form>
+          <div class="form-group">
+            <label for="searchTerm">Search Term:</label>
+            <input
+              type="text"
+              class="form-control"
+              id="searchTerm"
+              placeholder=""
+            />
+          </div>
+          <div class="form-group">
+            <label for="requestedNumber">Number of Records to Retrieve</label>
+            <select class="form-control" id="requestedNumber">
+              <option value="5" id="1">5</option>
+              <option value="10">10</option>
+              <option value="15">15</option>
+              <option value="20">20</option>
+              <option value="50">50</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="startYearSearch">Start Year (Optional):</label>
+            <input
+              type="text"
+              class="form-control"
+              id="startYearSearch"
+              placeholder=""
+            />
+          </div>
+          <div class="form-group">
+            <label for="endYearSearch">End Year (Optional):</label>
+            <input
+              type="text"
+              class="form-control"
+              id="endYearSearch"
+              placeholder=""
+            />
+          </div>
+          <button id="submit" type="submit" class="btn btn-primary">Search</button>
+          <button id="reset" type="reset" class="btn btn-primary">Clear Results</button>
+        </form>
+      </div>
     </div>
 
     <div class="card">
-        <h5 class="card-header">Top Articles</h5>
-        <div class="card-body">
-        </div>
+      <h5 class="card-header">Top Articles</h5>
+      <div class="card-body"></div>
     </div>
-
 
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
-        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
-        crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
-        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
-        crossorigin="anonymous"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
-        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
-        crossorigin="anonymous"></script>
-</body>
-
+    <script
+      src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+      integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+      integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+      integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+      crossorigin="anonymous"
+    ></script>
+        <script
+      src="https://code.jquery.com/jquery-3.3.1.min.js"
+      integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+      crossorigin="anonymous"
+    ></script>
+    <script src="./script.js"></script>
+  </body>
 </html>
