@@ -1,0 +1,16 @@
+body {
+    padding: 10px;
+
+}
+
+.jumbotron{
+    background-color: darkblue;
+    color: white;
+    text-align: center;
+}
+
+.btn {
+    background: white;
+    border: solid 2px grey;
+    color: black
+}
