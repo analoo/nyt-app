@@ -1,20 +1,13 @@
 var queryURL = 'http://newsapi.org/v2/top-headlines?country=us&apiKey=dac408cb31584307b54bf94d83582e21';
-
+var NYTData;
 $.ajax({
   url: queryURL,
   method: "GET"
 }).then(function (response) {
 
-  // console.log(response);
+  NYTData = response;
 
-  for (let i = 0; i < response.articles.length; i++) {
-    // console.log(response.articles[i].source);
-    // console.log(response.articles[i].title);
-    // console.log(response.articles[i].author);
-    // console.log(response.articles[i].description);
-    // console.log(response.articles[i].url);
-    // console.log(response.articles[i].publishedAt);
-  }
+console.log(NYTData)
 });
 
   var searchTerm;
@@ -29,10 +22,26 @@ function getData() {
   endYearSearch = $("#endYearSearch").val();
 
   event.preventDefault();
-  console.log(searchTerm);
-  console.log(requestedNumber);
-  console.log(startYearSearch);
-  console.log(endYearSearch + "");
-}
+  var article;
+  var description;
+  for (let i = 0; i < requestedNumber; i++) {
+    var titleDiv = $("<div>");
+    titleDiv.text(NYTData.articles[i].title);
+    $("#appended-articles").append(titleDiv);
+    
+    NYTData.articles[i].source;
+    NYTData.articles[i].title;
+    NYTData.articles[i].author;
+    NYTData.articles[i].description;
+    NYTData.articles[i].url;
+    NYTData.articles[i].publishedAt;
+  }
+  // console.log(searchTerm);
+  // console.log(requestedNumber);
+  // console.log(startYearSearch);
+  // console.log(endYearSearch + "");
+
+};
 
 $("#submit").on("click", getData);
+
